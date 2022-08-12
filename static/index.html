@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emails</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div id="register-login" class="wrapper">
+      <div id="new" class="container">
+        New users sign up here: <br />
+        <form id="register">
+          <input type="email" id="r-email" name="email" placeholder="Enter your email" required />
+          <input type="text" id="r-name" name="name" placeholder="Enter your name" required />
+          <input type="password" id="r-password" name="password" placeholder="Enter your password" required />
+          <input type="submit" id="subReg" name="submit" />
+        </form>
+      </div>
+      <div id="returning" class="container">
+        Returning users login here: <br />
+        <form id="login">
+          <input type="email" id="l-email" name="email" placeholder="Enter your email" required />
+          <input type="text" id="l-name" name="name" placeholder="Enter your name" required />
+          <input type="password" id="l-password" name="password" placeholder="Enter your password" required />
+          <input type="submit" id="subLog" name="submit" />
+        </form>
+      </div>
+    </div>
+    <div id="emails" class="wrapper" style="display: none">
+      <button id="get-email" class="btn">Get email</button>
+      <div id="history" class="container"></div>
+      <div id="creator" class="container">
+        <form id="email-form">
+          <label for="to_user">To: </label>
+          <br />
+          <input type="email" id="to_user" name="receiver" placeholder="Recipient address" required />
+          <br />
+          <label for="subject">Subject: </label>
+          <br />
+          <input type="text" id="subject" name="subject" placeholder="Subject" />
+          <br />
+          <label for="body">Body: </label>
+          <br />
+          <textarea
+            id="body"
+            name="body"
+            placeholder="Write your email here"
+            style="width: 500px; height: 350px"
+          ></textarea>
+          <br />
+          <input type="submit" id="subMail" name="email" name="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
